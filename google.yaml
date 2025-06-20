@@ -1,0 +1,26 @@
+identity:
+  author: YourName
+  name: google_calendar
+  label:
+    en_US: Google Calendar
+  description:
+    en_US: Google Calendar Integration
+  icon: icon.svg
+  tags:
+    - calendar
+credentials_for_provider:
+  google_service_account:
+    type: secret-input
+    required: true
+    label:
+      en_US: Google Service Account (JSON)
+    placeholder:
+      en_US: Paste your Google Service Account JSON here
+    help:
+      en_US: Generate a service account key from Google Cloud Console and paste the full JSON.
+    url: https://console.cloud.google.com/apis/credentials
+tools:
+  - tools/google_calendar.yaml
+extra:
+  python:
+    source: provider/google.py

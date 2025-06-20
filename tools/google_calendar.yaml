@@ -1,0 +1,31 @@
+identity:
+  name: google_calendar
+  author: YourName
+  label:
+    en_US: Google Calendar
+description:
+  human:
+    en_US: A tool to create and fetch events from your Google Calendar using natural language.
+  llm: Google Calendar interaction tool
+parameters:
+  - name: action
+    type: string
+    required: true
+    label:
+      en_US: Action
+    human_description:
+      en_US: Specify "create", "fetch", or "delete"
+    llm_description: calendar action
+    form: llm
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Natural language query
+    human_description:
+      en_US: Describe what you want to do with your calendar
+    llm_description: calendar instruction
+    form: llm
+extra:
+  python:
+    source: tools/google_calendar.py
